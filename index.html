@@ -18,6 +18,7 @@
         .mainimg {
             margin: auto;
             margin-bottom: 20px;
+            width: 1000px;
         }
         
         .img-opt img {
@@ -29,14 +30,18 @@
 
 <body>
     <div class="box">
-        <img src="img/html.jpg" alt="" class="mainimg">
+        <img src="img/html.jpg" alt="" class="mainimg" id="mainimg">
         <div class="img-opt">
-            <img src="img/html.jpg" alt="">
-            <img src="img/CSS.webp" alt="">
-            <img src="img/javascript.webp" alt="">
+            <img src="img/html.jpg" onclick="btnclick(this.src)">
+            <img src="img/CSS.jpg" onclick="btnclick(this.src)">
+            <img src="img/javascript.jpg" onclick="btnclick(this.src)">
         </div>
     </div>
-
+    <script>
+        function btnclick(value) {
+            document.getElementById("mainimg").src = value;
+        }
+    </script>
 </body>
 
 </html>
